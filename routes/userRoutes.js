@@ -5,7 +5,7 @@ const userController = require("../controllers/userController");
 const router = express.Router();
 
 router.post("/register", authController.register);
-router.get("/login", authController.login);
+router.post("/login", authController.login);
 
 // Apply the protect middleware for the below routes
 router.use(authController.protect);
